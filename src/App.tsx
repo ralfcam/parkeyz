@@ -1,5 +1,5 @@
 import React from 'react';
-import AppComponent from './components/App/index';
+import AppComponent from './composants/App/index';
 
 function App() {
   return <AppComponent />;
