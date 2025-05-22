@@ -17,8 +17,12 @@ const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigat
       // Support old navigation pattern if prop is provided
       onNavigate(path);
     } else {
-      // Use React Router navigation
-      navigate(`/${path}`);
+      // Use React Router navigation with new checkout flow
+      if (path === 'payment') {
+        navigate('/checkout/payment');
+      } else {
+        navigate(`/${path}`);
+      }
     }
   };
 
@@ -186,6 +190,7 @@ const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigat
             <button 
               className="btn-primary btn-lg w-full mt-layout-lg"
               onClick={() => handleNavigate('payment')}
+              disabled={!agreedToTerms}
             >
               Payer Maintenant
             </button>

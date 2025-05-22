@@ -1,7 +1,8 @@
 import React from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, ScrollRestoration } from 'react-router-dom';
 import Entete from './Entete';
 import PiedDePage from '../PiedDePage';
+import ScrollToHashElement from '../../components/ScrollToHashElement';
 
 function App() {
   const navigate = useNavigate();
@@ -20,9 +21,9 @@ function App() {
       'shop': '/boutique-forfaits',
       'terms': '/terms',
       'privacy': '/privacy',
-      'product-detail': '/product-detail',
-      'shipping': '/shipping',
-      'payment': '/payment',
+      'product-detail': '/boutique-forfaits/product/1',
+      'shipping': '/checkout/shipping',
+      'payment': '/checkout/payment',
       'faq': '/#faq' // Anchor link to FAQ section on home page
     };
     
@@ -44,6 +45,10 @@ function App() {
         <Outlet />
       </main>
       <PiedDePage onNavigate={handleNavigate} />
+      {/* ScrollRestoration ensures scroll position is preserved when navigating */}
+      <ScrollRestoration />
+      {/* Custom component to handle hash links */}
+      <ScrollToHashElement />
     </div>
   );
 }

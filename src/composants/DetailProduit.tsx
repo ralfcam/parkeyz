@@ -1,6 +1,6 @@
 import React from 'react';
 import { Key, Settings, Shield, Car } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 interface FeatureCardProps {
   icon: React.ElementType;
@@ -22,6 +22,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title }) => (
 
 const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
   const navigate = useNavigate();
+  const params = useParams();
+  const productId = params.id || '1'; // Default to 1 if no ID is provided
 
   // Handle navigation with compatibility for both old and new patterns
   const handleNavigate = (path: string) => {
@@ -29,8 +31,12 @@ const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
       // Support old navigation pattern if prop is provided
       onNavigate(path);
     } else {
-      // Use React Router navigation
-      navigate(`/${path}`);
+      // Use React Router navigation with the new checkout flow
+      if (path === 'shipping') {
+        navigate('/checkout/shipping');
+      } else {
+        navigate(`/${path}`);
+      }
     }
   };
 

@@ -15,8 +15,12 @@ const ProductSection: React.FC<ProductSectionProps> = ({ onNavigate }) => {
       // Support old navigation pattern if prop is provided
       onNavigate(path);
     } else {
-      // Use React Router navigation
-      navigate(`/${path}`);
+      // Use React Router navigation - use new nested route pattern
+      if (path === 'product-detail') {
+        navigate('/boutique-forfaits/product/1'); // Navigate to the new nested route
+      } else {
+        navigate(`/${path}`);
+      }
     }
   };
 
