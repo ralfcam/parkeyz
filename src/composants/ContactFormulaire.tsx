@@ -6,21 +6,27 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
     fullName: '',
     email: '',
     message: '',
-    address: ''
+    address: ''  // Will be used when map feature is implemented
   });
   
+  // Future Implementation: Google Maps
+  /*
   const [mapUrl, setMapUrl] = useState(
     'https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Paris,France'
   );
+  */
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
 
+    // Future Implementation: Google Maps address search
+    /*
     if (name === 'address' && value.trim()) {
       const encodedAddress = encodeURIComponent(value);
       setMapUrl(`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${encodedAddress}`);
     }
+    */
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -105,6 +111,9 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
                     placeholder="jean@example.com"
                   />
                 </div>
+                
+                {/* Future Implementation: Address input for map integration */}
+                {/*
                 <div>
                   <label htmlFor="address" className="block text-small font-medium text-gray-700 mb-1">
                     Votre Adresse
@@ -122,6 +131,8 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
                     />
                   </div>
                 </div>
+                */}
+
                 <div>
                   <label htmlFor="message" className="block text-small font-medium text-gray-700 mb-1">
                     Votre Message
@@ -145,7 +156,10 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
                 </button>
               </form>
             </div>
-            <div className="h-[600px] rounded-card overflow-hidden shadow-lg">
+            
+            {/* Future Implementation: Google Maps integration */}
+            {/*
+            <div>
               <iframe
                 title="Location Map"
                 width="100%"
@@ -156,6 +170,7 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
                 allowFullScreen
               />
             </div>
+            */}
           </div>
         </div>
       </div>
