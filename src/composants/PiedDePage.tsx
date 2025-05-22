@@ -16,7 +16,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
           <div>
             <div className="flex items-center gap-2 mb-layout-md">
               <img 
-                src="/parkeeyzlogo.svg" 
+                src="/logo.svg" 
                 alt="Logo PARKEEYZ" 
                 className="h-10 w-auto"
                 onError={(e) => {
@@ -55,10 +55,10 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
                   className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
                     e.preventDefault();
-                    onNavigate('pricing');
+                    onNavigate('boutique-forfaits');
                   }}
                 >
-                  Forfaits
+                  Boutique & Forfaits
                 </a>
               </li>
               <li>

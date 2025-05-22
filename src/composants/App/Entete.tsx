@@ -51,7 +51,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('tutorials'); // This routing key might change later
+                handleNavClick('tutorials');
               }}
             >
               Tutoriels et Vidéos
@@ -61,30 +61,20 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('pricing'); // This routing key might change later
+                handleNavClick('boutique-forfaits');
               }}
             >
-              Forfaits
+              Boutique et Forfaits
             </a>
             <a 
               href="#" 
               className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('contact'); // This routing key might change later
+                handleNavClick('contact');
               }}
             >
               Contactez-Nous
-            </a>
-            <a 
-              href="#" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('shop'); // This routing key might change later
-              }}
-            >
-              Boutique
             </a>
           </nav>
           
@@ -139,7 +129,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
                 className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('tutorials'); // Routing key
+                  handleNavClick('tutorials');
                 }}
               >
                 Tutoriels et Vidéos
@@ -149,30 +139,20 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
                 className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('pricing'); // Routing key
+                  handleNavClick('boutique-forfaits');
                 }}
               >
-                Forfaits
+                Boutique & Forfaits
               </a>
               <a 
                 href="#" 
                 className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick('contact'); // Routing key
+                  handleNavClick('contact');
                 }}
               >
                 Contactez-Nous
-              </a>
-              <a 
-                href="#" 
-                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('shop'); // Routing key
-                }}
-              >
-                Boutique
               </a>
               <button className="w-full text-center btn-primary">
                 Connexion

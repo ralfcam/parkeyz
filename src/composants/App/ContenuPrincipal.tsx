@@ -15,6 +15,7 @@ import InformationsLivraison from '../InformationsLivraison';
 import OptionsPaiement from '../OptionsPaiement';
 import AccueilHero from './AccueilHero';
 import APropos from '../APropos';
+import BoutiqueForfaits from '../BoutiqueForfaits';
 
 interface ContenuPrincipalProps {
   currentView: string;
@@ -42,8 +43,10 @@ const ContenuPrincipal: React.FC<ContenuPrincipalProps> = ({ currentView, handle
         return <InformationsLivraison onNavigate={handleNavigate} />;
       case 'payment':
         return <OptionsPaiement total="208,00€" onPaymentComplete={() => handleNavigate('confirmation')} />;
+      case 'boutique-forfaits':
+        return <BoutiqueForfaits onNavigate={handleNavigate} />;
       case 'pricing':
-        return <Forfaits />;
+        return <BoutiqueForfaits onNavigate={handleNavigate} />;
       default:
         return (
           <>
