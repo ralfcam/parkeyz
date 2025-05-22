@@ -9,7 +9,7 @@ import PricingPlan from '../Forfaits/PricingPlan';
 import { plans } from '../Forfaits/pricingData';
 
 interface BoutiqueForfaitsProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void; // Make it optional for backward compatibility
 }
 
 const BoutiqueForfaits: React.FC<BoutiqueForfaitsProps> = ({ onNavigate }) => {

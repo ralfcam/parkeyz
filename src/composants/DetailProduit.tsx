@@ -1,5 +1,6 @@
 import React from 'react';
 import { Key, Settings, Shield, Car } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface FeatureCardProps {
   icon: React.ElementType;
@@ -7,7 +8,7 @@ interface FeatureCardProps {
 }
 
 interface DetailProduitProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void; // Make it optional for backward compatibility
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title }) => (
@@ -20,6 +21,19 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title }) => (
 );
 
 const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
+  const navigate = useNavigate();
+
+  // Handle navigation with compatibility for both old and new patterns
+  const handleNavigate = (path: string) => {
+    if (onNavigate) {
+      // Support old navigation pattern if prop is provided
+      onNavigate(path);
+    } else {
+      // Use React Router navigation
+      navigate(`/${path}`);
+    }
+  };
+
   return (
     <section className="section bg-neutral-light">
       {/* Section Principale du Produit */}
@@ -56,7 +70,7 @@ const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
 
             <button 
               className="btn-secondary btn-lg w-full mb-layout-md"
-              onClick={() => onNavigate('shipping')}
+              onClick={() => handleNavigate('shipping')}
             >
               Acheter Maintenant
             </button>

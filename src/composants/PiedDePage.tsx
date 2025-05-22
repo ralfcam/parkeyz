@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Linkedin, Facebook, Instagram, Music } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface PiedDePageProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void;
 }
 
 const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
@@ -15,15 +16,17 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
           {/* Logo et Description */}
           <div>
             <div className="flex items-center gap-2 mb-layout-md">
-              <img 
-                src="/logo.svg" 
-                alt="Logo PARKEEYZ" 
-                className="h-10 w-auto"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = 'https://placehold.co/40x40/00b8ff/ffffff?text=P';
-                }}
-              />
+              <Link to="/">
+                <img 
+                  src="/logo.svg" 
+                  alt="Logo PARKEEYZ" 
+                  className="h-10 w-auto"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://placehold.co/40x40/00b8ff/ffffff?text=P';
+                  }}
+                />
+              </Link>
             </div>
             <p className="text-gray-300 leading-relaxed text-body">
               Votre solution de stationnement intelligente. Sécurisez, contrôlez et gérez votre espace de stationnement en toute simplicité.
@@ -35,52 +38,41 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
             <h3 className="text-xl font-semibold mb-layout-md">Liens Rapides</h3>
             <ul className="space-y-layout-sm">
               <li>
-                <a 
-                  href="#" 
+                <Link 
+                  to="/" 
                   className="text-gray-300 hover:text-white transition-colors text-body"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onNavigate('home');
-                  }}
                 >
                   Aperçu du Produit
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <Link 
+                  to="/boutique-forfaits" 
                   className="text-gray-300 hover:text-white transition-colors text-body"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onNavigate('boutique-forfaits');
-                  }}
                 >
                   Boutique & Forfaits
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <Link 
+                  to="/#faq" 
                   className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
+                    // Special handling for anchor links
                     e.preventDefault();
-                    onNavigate('faq');
+                    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   FAQs
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <Link 
+                  to="/contact" 
                   className="text-gray-300 hover:text-white transition-colors text-body"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onNavigate('contact');
-                  }}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -126,27 +118,19 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
           <p className="flex flex-col sm:flex-row justify-center items-center gap-2">
             <span>Copyright © 2025 PARKEEYZ | Tous Droits Réservés</span>
             <span className="hidden sm:inline">|</span>
-            <a 
-              href="#" 
+            <Link 
+              to="/terms" 
               className="hover:text-white"
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate('terms');
-              }}
             >
               Conditions Générales
-            </a>
+            </Link>
             <span className="hidden sm:inline">|</span>
-            <a 
-              href="#" 
+            <Link 
+              to="/privacy" 
               className="hover:text-white"
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate('privacy');
-              }}
             >
               Politique de Confidentialité
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import { Truck, Box } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface InformationsLivraisonProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void; // Make it optional for backward compatibility
 }
 
 const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigate }) => {
   const [deliveryMethod, setDeliveryMethod] = useState<'delivery' | 'pickup'>('delivery');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const navigate = useNavigate();
+
+  // Handle navigation with compatibility for both old and new patterns
+  const handleNavigate = (path: string) => {
+    if (onNavigate) {
+      // Support old navigation pattern if prop is provided
+      onNavigate(path);
+    } else {
+      // Use React Router navigation
+      navigate(`/${path}`);
+    }
+  };
 
   return (
     <section className="section bg-neutral-light">
@@ -172,7 +185,7 @@ const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigat
 
             <button 
               className="btn-primary btn-lg w-full mt-layout-lg"
-              onClick={() => onNavigate('payment')}
+              onClick={() => handleNavigate('payment')}
             >
               Payer Maintenant
             </button>
