@@ -24,9 +24,10 @@ const HeroSection: React.FC = () => (
         {/* Illustration Principale */}
         <div className="relative max-w-6xl mx-auto mt-section-sm">
           <img 
-            src="/abouthero.svg" 
+            src="/abouthero.webp" 
             alt="Innovation de Stationnement Intelligent"
             className="w-full h-auto max-w-4xl mx-auto"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://placehold.co/1200x600/neutral-dark/primary-light?text=Innovation+Parkeeyz';

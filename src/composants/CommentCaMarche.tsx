@@ -23,17 +23,17 @@ const Etape: React.FC<EtapeProps> = ({ image, title, description }) => (
 const CommentCaMarche: React.FC = () => {
   const steps: EtapeProps[] = [
     {
-      image: "/howitworks1.svg",
+      image: "/howitworks1.webp",
       title: "Installez Votre Bouncer Key",
       description: "Processus d'installation rapide de 15 minutes. Configuration facile pour votre place de stationnement."
     },
     {
-      image: "/howitworks2.svg",
+      image: "/howitworks2.webp",
       title: "Connectez & Contrôlez",
       description: "Gérez l'accès en toute simplicité via l'application mobile Bouncer Key."
     },
     {
-      image: "/howitworks3.svg",
+      image: "/howitworks3.webp",
       title: "Profitez de la Tranquillité d'Esprit",
       description: "Surveillez votre espace en toute sécurité depuis n'importe où, à tout moment."
     }

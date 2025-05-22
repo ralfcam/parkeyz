@@ -34,7 +34,7 @@ const Entete: React.FC<EnteteProps> = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center cursor-pointer" onClick={closeMobileMenu}>
             <img 
-              src="/logo.svg" 
+              src="/logo.webp" 
               alt="Logo PARKEEYZ" 
               className="h-10 w-auto"
               onError={(e) => {

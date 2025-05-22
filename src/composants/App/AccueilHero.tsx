@@ -58,7 +58,7 @@ const AccueilHero: React.FC = () => { // Renamed from HomeHero
         </div>
         <div className="w-full lg:w-[600px]">
           <img 
-            src="/hero.svg" 
+            src="/hero.webp" 
             alt="Illustration de Stationnement Intelligent"
             className="w-full h-auto"
             onError={(e) => {

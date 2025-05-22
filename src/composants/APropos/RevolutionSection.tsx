@@ -16,9 +16,10 @@ const RevolutionSection: React.FC = () => (
         </div>
         <div className="md:w-1/2 mt-layout-lg md:mt-0">
           <img 
-            src="/aboutsmartparkimgrevo.svg" 
+            src="/aboutsmartparkimgrevo.webp" 
             alt="Révolution du Stationnement Intelligent" 
             className="w-full h-auto rounded-card shadow-card"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://placehold.co/600x400/primary-light/neutral-dark?text=Smart+Parking+Revolution';

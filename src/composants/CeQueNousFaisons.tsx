@@ -25,9 +25,10 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
   }`}>
     <div className="flex justify-center mb-layout-lg">
       <img 
-        src={image} 
+        src={image.replace('.svg', '.webp').replace('/public', '')} 
         alt={title} 
         className="w-48 h-48 object-contain"
+        loading="lazy"
         onError={(e) => {
           const target = e.target as HTMLImageElement;
           target.src = 'https://placehold.co/192x192/primary-light/neutral-dark?text=Solution+Parkeeyz';
@@ -172,9 +173,10 @@ const CeQueNousFaisons: React.FC = () => {
             </div>
             <div>
               <img 
-                src="/whatwedo1.svg" 
+                src="/whatwedo1.webp" 
                 alt="Solution Parkeeyz"
                 className="w-full h-auto rounded-card shadow-card"
+                loading="lazy"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';

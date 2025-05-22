@@ -19,9 +19,10 @@ const SetupCard: React.FC<SetupCardProps> = ({ title, image, buttonVariant = 'se
       <div className="flex-grow flex flex-col items-center">
         <div className="w-32 h-32 flex items-center justify-center mb-layout-md">
           <img 
-            src={image} 
+            src={image.replace('.svg', '.webp').replace('/public', '')} 
             alt={title}
             className="w-full h-full object-contain"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://placehold.co/128x128/neutral-dark/primary-light?text=Configuration';

@@ -12,7 +12,7 @@ interface TeamMemberProps {
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, linkedIn, description }) => (
   <div className="card p-layout-md">
     <div className="relative mb-layout-md group">
-      <img
+      {/* <img
         src={image}
         alt={name}
         className="w-full h-64 object-cover rounded-lg"
@@ -20,7 +20,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, linkedIn, de
           const target = e.target as HTMLImageElement;
           target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=003366&color=fff&size=400`;
         }}
-      />
+      /> */}
       {linkedIn && (
         <a
           href={linkedIn}
@@ -41,33 +41,33 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, linkedIn, de
 const TeamSection: React.FC = () => {
   const teamMembers: TeamMemberProps[] = [
     {
-      name: "Sophie Martin",
+      name: "Hureyre Cankurtaran",
       role: "Fondatrice & CEO",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       linkedIn: "https://linkedin.com",
       description: "Passionnée par l'innovation et l'entrepreneuriat, Sophie a fondé Parkeeyz avec la vision de révolutionner l'accès au stationnement urbain."
     },
     {
-      name: "Thomas Dubois",
+      name: "Samy Abdessemed",
       role: "Directeur Technique",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       linkedIn: "https://linkedin.com",
       description: "Expert en IoT et systèmes embarqués, Thomas dirige le développement technique de nos solutions innovantes de stationnement."
     },
     {
-      name: "Marie Laurent",
+      name: "Jose Torrealba",
       role: "Responsable Design",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       linkedIn: "https://linkedin.com",
       description: "Avec son œil aiguisé pour le design, Marie crée des interfaces utilisateur intuitives qui rendent nos produits accessibles à tous."
     },
-    {
-      name: "Lucas Bernard",
-      role: "Directeur Commercial",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      linkedIn: "https://linkedin.com",
-      description: "Fort de 10 ans d'expérience dans les solutions B2B, Lucas développe nos partenariats stratégiques et relations clients."
-    }
+    // {
+    //   name: "Lucas Bernard",
+    //   role: "Directeur Commercial",
+    //   image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    //   linkedIn: "https://linkedin.com",
+    //   description: "Fort de 10 ans d'expérience dans les solutions B2B, Lucas développe nos partenariats stratégiques et relations clients."
+    // }
   ];
 
   return (

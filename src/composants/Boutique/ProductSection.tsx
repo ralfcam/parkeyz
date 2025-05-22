@@ -32,7 +32,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ onNavigate }) => {
             {/* Image du Produit */}
             <div className="lg:w-1/2 bg-primary-light rounded-card p-layout-lg">
               <img 
-                src="/shopbouncer.svg" 
+                src="/shopbouncer.webp" 
                 alt="Dispositif de Stationnement Parkeeyz"
                 className="w-full h-auto max-w-lg mx-auto"
                 onError={(e) => {

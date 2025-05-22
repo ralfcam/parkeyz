@@ -21,20 +21,20 @@ const WhatWeDoSection: React.FC = () => (
           title="Bouncer"
           description="Sécurisez Votre Stationnement, Sans Effort"
           price="99,99€"
-          image="/whatwedo1.svg"
+          image="/whatwedo1.webp"
           isActive
         />
         <ProductCard
           title="Entreprise"
           description="Gestion multi-utilisateurs pour installations partagées."
           price="99,99€"
-          image="/whatwedo2.svg"
+          image="/whatwedo2.webp"
         />
         <ProductCard
           title="Terminal"
           description="Solutions de stationnement premium pour les grandes entreprises."
           price="99,99€"
-          image="/whatwedo3.svg"
+          image="/whatwedo3.webp"
         />
       </div>
 

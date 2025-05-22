@@ -135,7 +135,7 @@ const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigat
             <div className="space-y-layout-lg mb-layout-lg">
               <div className="flex items-center gap-layout-md">
                 <img
-                  src="/shippinginfobouncer1.svg"
+                  src="/shippinginfobouncer1.webp"
                   alt="Bouncer"
                   className="w-24 h-24 md:w-32 md:h-32 object-contain"
                   onError={(e) => {
@@ -153,7 +153,7 @@ const InformationsLivraison: React.FC<InformationsLivraisonProps> = ({ onNavigat
               </div>
               <div className="flex items-center gap-layout-md">
                 <img
-                  src="/shippinginfobouncer2.svg"
+                  src="/shippinginfobouncer2.webp"
                   alt="Bouncer Premium"
                   className="w-24 h-24 md:w-36 md:h-36 object-contain"
                   onError={(e) => {

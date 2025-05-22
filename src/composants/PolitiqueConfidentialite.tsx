@@ -37,7 +37,7 @@ const PolitiqueConfidentialite: React.FC = () => {
 
             <div className="relative">
               <img 
-                src="/parkingillustration.svg" 
+                src="/parkingillustration.webp" 
                 alt="Illustration de Stationnement"
                 className="w-full h-auto rounded-card shadow-card"
                 onError={(e) => {
@@ -65,7 +65,7 @@ const PolitiqueConfidentialite: React.FC = () => {
 
           <div className="flex justify-center items-start">
             <img 
-              src="/privacypolicy.svg" 
+              src="/privacypolicy.webp" 
               alt="Icône de Politique de Confidentialité"
               className="w-96 h-96 object-contain"
               onError={(e) => {

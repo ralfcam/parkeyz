@@ -8,7 +8,7 @@ const AppelActionContact: React.FC = () => {
           {/* Illustration Gauche - Cachée sur mobile */}
           <div className="w-1/4 -ml-layout-lg hidden md:flex items-center">
             <img 
-              src="/contact&faq1.svg" 
+              src="/contact&faq1.webp" 
               alt="Illustration de Panneaux de Stationnement"
               className="w-full h-[300px] object-contain"
             />
@@ -30,7 +30,7 @@ const AppelActionContact: React.FC = () => {
           {/* Illustration Droite - Cachée sur mobile */}
           <div className="w-1/4 -mr-layout-lg hidden md:flex items-center translate-y-6">
             <img 
-              src="/contact&faq2.svg" 
+              src="/contact&faq2.webp" 
               alt="Illustration d'Espace de Stationnement"
               className="w-full h-[300px] object-contain transform -scale-x-100"
             />

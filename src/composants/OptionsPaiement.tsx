@@ -63,7 +63,7 @@ const OptionsPaiement: React.FC<OptionsPaiementProps> = ({ total, onPaymentCompl
                   <span className="font-medium text-body">Carte de Crédit</span>
                 </div>
                 <div className="flex gap-2">
-                  <img src="https://www.mastercard.com/content/dam/public/brandcenter/assets/images/logos/mclogo-for-footer.svg" alt="Mastercard" className="h-6" />
+                  <img src="https://www.mastercard.com/content/dam/public/brandcenter/assets/images/logos/mclogo-for-footer.webp" alt="Mastercard" className="h-6" />
                   <img src="https://www.visa.com/images/visa-logo.png" alt="Visa" className="h-6" />
                   <img src="https://www.americanexpress.com/content/dam/amex/us/merchant/supplies-uplift/logos/AMEX_Icon_Blue_Box.png" alt="Amex" className="h-6" />
                 </div>
@@ -187,7 +187,7 @@ const OptionsPaiement: React.FC<OptionsPaiementProps> = ({ total, onPaymentCompl
           >
             Payer | {total}
             <img 
-              src="/click-icon.svg" 
+              src="/click-icon.webp" 
               alt="Cliquer"
               className="w-6 h-6"
               onError={(e) => {

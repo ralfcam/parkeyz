@@ -18,7 +18,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
             <div className="flex items-center gap-2 mb-layout-md">
               <Link to="/">
                 <img 
-                  src="/logo.svg" 
+                  src="/logo.webp" 
                   alt="Logo PARKEEYZ" 
                   className="h-10 w-auto"
                   onError={(e) => {

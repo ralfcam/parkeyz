@@ -53,7 +53,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 - [ ] Create lightweight **cart context** (React Context + reducer) (*deferred - UI element commented out*).
 - [ ] Basic **form validation** (React-Hook-Form + Yup) for Contact & Payment.
 - [x] Tailwind **design tokens** → centralise colours, spacing, typography.
-- [ ] Replace placeholder images with optimised assets, add <img loading="lazy">.
+- [x] Replace placeholder images with optimised assets, add <img loading="lazy">.
 - [ ] Linting & formatting: ESLint + Prettier + husky pre-commit.
 
 ### MVP · **Q3 2025**

@@ -63,7 +63,7 @@ const ContactFormulaire: React.FC = () => { // Renamed from Contact
             </div>
             <div className="w-full lg:w-[600px]">
               <img 
-                src="/contactusparkingoverview.svg" 
+                src="/contactusparkingoverview.webp" 
                 alt="Aperçu du Stationnement"
                 className="w-full h-auto"
                 onError={(e) => {

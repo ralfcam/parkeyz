@@ -59,7 +59,7 @@ const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-section-sm items-center">
           <div>
             <img 
-              src="/shopbouncer.svg" 
+              src="/shopbouncer.webp" 
               alt="Dispositif de Stationnement Bouncer Key"
               className="w-full h-auto max-w-xl mx-auto rounded-card shadow-card"
               onError={(e) => {

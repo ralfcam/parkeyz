@@ -6,9 +6,10 @@ const ReadyToUnlockSection: React.FC = () => (
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="w-1/4 md:block hidden">
           <img 
-            src="/aboutparkingdevice.svg" 
+            src="/aboutparkingdevice.webp" 
             alt="Dispositif de Stationnement" 
             className="w-full h-auto"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://placehold.co/300x300/primary-light/neutral-dark?text=Dispositif+de+Stationnement';
@@ -27,9 +28,10 @@ const ReadyToUnlockSection: React.FC = () => (
 
         <div className="w-1/4 md:block hidden">
           <img 
-            src="/aboutparkingdeviceqr.svg" 
+            src="/aboutparkingdeviceqr.webp" 
             alt="QR du Dispositif de Stationnement" 
             className="w-full h-auto"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://placehold.co/300x300/primary-light/neutral-dark?text=QR+Code';

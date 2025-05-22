@@ -5,7 +5,7 @@ import { features } from './pricingData';
 const ComparisonTable: React.FC = () => (
   <div className="card-featured overflow-hidden mb-section-sm p-0">
     <div className="p-layout-lg flex items-center justify-center gap-layout-sm border-b border-gray-100">
-      <img src="/featurecomparisontable.svg" alt="Tableau de Comparaison des Fonctionnalités" className="w-10 h-10" />
+      <img src="/featurecomparisontable.webp" alt="Tableau de Comparaison des Fonctionnalités" className="w-10 h-10" />
       <h3 className="text-neutral-dark">Tableau de Comparaison des Fonctionnalités</h3>
     </div>
     <div className="overflow-x-auto">

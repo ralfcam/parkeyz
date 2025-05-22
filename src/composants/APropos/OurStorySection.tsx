@@ -39,9 +39,10 @@ const OurStorySection: React.FC = () => (
         </div>
         <div className="lg:w-1/2">
           <img 
-            src="/ourstory.svg" 
+            src="/webp/ourstory.webp" 
             alt="L'Histoire de Parkeeyz"
             className="w-full h-auto rounded-card shadow-card"
+            loading="lazy"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';

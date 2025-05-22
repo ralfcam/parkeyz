@@ -20,7 +20,7 @@ const TutorielsVideos: React.FC = () => {
           
           <div className="mt-section-sm">
             <img 
-              src="/tutorialsandvideoshero.svg" 
+              src="/tutorialsandvideoshero.webp" 
               alt="Tutoriels et Vidéos"
               className="w-full max-w-4xl mx-auto h-auto"
               onError={(e) => {
@@ -50,17 +50,17 @@ const TutorielsVideos: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-layout-lg">
             <SetupCard
               title="Configuration Bouncer Key"
-              image="/tutorialsanvideos1.svg"
+              image="/tutorialsanvideos1.webp"
               buttonVariant="neutral-dark"
             />
             <SetupCard
               title="Configuration Entreprise"
-              image="/tutorialsandvideo2.svg"
+              image="/tutorialsandvideo2.webp"
               buttonVariant="secondary"
             />
             <SetupCard
               title="Installation Terminal"
-              image="/tutorialsandvideo3.svg"
+              image="/tutorialsandvideo3.webp"
               buttonVariant="neutral-dark"
             />
           </div>

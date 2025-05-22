@@ -62,7 +62,7 @@ const PourquoiParkeeyz: React.FC = () => {
 
           <div className="relative">
             <img 
-              src="/whybouncerspot.svg" 
+              src="/whybouncerspot.webp" 
               alt="Système de Stationnement"
               className="w-full h-auto"
               onError={(e) => {
