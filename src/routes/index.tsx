@@ -11,7 +11,7 @@ import APropos from '../composants/APropos';
 import BoutiqueForfaits from '../composants/BoutiqueForfaits';
 import HomePage from '../composants/Pages/HomePage';
 import LoginPage from '../composants/Pages/LoginPage';
-import ProtectedRoute from '../components/ProtectedRoute';
+import ProtectedRoute from '../composants/ProtectedRoute';
 
 // Error page for when a route doesn't exist
 const ErrorPage = () => (
