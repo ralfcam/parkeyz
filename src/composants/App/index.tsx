@@ -1,21 +1,48 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Globe } from 'lucide-react';
+import React from 'react';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Entete from './Entete';
-import ContenuPrincipal from './ContenuPrincipal';
 import PiedDePage from '../PiedDePage';
 
 function App() {
-  const [currentView, setCurrentView] = useState('home');
-
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Compatibility layer for components still using the old navigation pattern
   const handleNavigate = (view: string) => {
-    setCurrentView(view);
+    // Map the old view names to the new URL paths
+    const viewToPathMap: Record<string, string> = {
+      'home': '/',
+      'a-propos': '/a-propos',
+      'contact': '/contact',
+      'tutorials': '/tutorials',
+      'boutique-forfaits': '/boutique-forfaits',
+      'pricing': '/boutique-forfaits',
+      'shop': '/boutique-forfaits',
+      'terms': '/terms',
+      'privacy': '/privacy',
+      'product-detail': '/product-detail',
+      'shipping': '/shipping',
+      'payment': '/payment',
+      'faq': '/#faq' // Anchor link to FAQ section on home page
+    };
+    
+    const path = viewToPathMap[view] || '/';
+    navigate(path);
     window.scrollTo(0, 0);
+  };
+
+  // Extract the current view from the location path
+  const getCurrentView = () => {
+    const path = location.pathname.slice(1) || 'home';
+    return path;
   };
 
   return (
     <div className="min-h-screen bg-neutral-darker">
-      <Entete currentView={currentView} handleNavigate={handleNavigate} />
-      <ContenuPrincipal currentView={currentView} handleNavigate={handleNavigate} />
+      <Entete currentView={getCurrentView()} handleNavigate={handleNavigate} />
+      <main>
+        <Outlet />
+      </main>
       <PiedDePage onNavigate={handleNavigate} />
     </div>
   );
