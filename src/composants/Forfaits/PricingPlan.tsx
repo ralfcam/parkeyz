@@ -4,28 +4,28 @@ interface PricingPlanProps {
   name: string;
   price: string;
   description: string;
-  buttonVariant?: 'light' | 'primary' | 'dark';
+  buttonVariant?: 'accent' | 'secondary' | 'neutral-dark';
 }
 
-const PricingPlan: React.FC<PricingPlanProps> = ({ name, price, description, buttonVariant = 'light' }) => {
-  const buttonStyles = {
-    light: 'bg-[#00D2FF] hover:bg-[#00bfe6] text-white',
-    primary: 'bg-[#1A73E8] hover:bg-[#1557b0] text-white',
-    dark: 'bg-[#003366] hover:bg-[#002347] text-white'
+const PricingPlan: React.FC<PricingPlanProps> = ({ name, price, description, buttonVariant = 'accent' }) => {
+  const buttonClasses = {
+    accent: 'btn-primary bg-accent hover:bg-accent-dark',
+    secondary: 'btn-secondary',
+    'neutral-dark': 'btn-primary bg-neutral-dark hover:bg-neutral-darker',
   };
 
   return (
-    <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow relative overflow-hidden">
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold text-[#003366] mb-2">{name}</h3>
-        <p className="text-gray-600 mb-4">À partir de</p>
+    <div className="card relative overflow-hidden">
+      <div className="mb-layout-lg">
+        <h3 className="text-neutral-dark mb-2">{name}</h3>
+        <p className="text-gray-600 mb-layout-sm text-small">À partir de</p>
         <div className="flex items-baseline">
-          <span className="text-4xl font-bold text-[#1A73E8]">{price}€</span>
-          <span className="ml-2 text-gray-600">Par Mois / Utilisateur</span>
+          <span className="text-display-2 text-secondary">{price}€</span>
+          <span className="ml-2 text-gray-600 text-small">Par Mois / Utilisateur</span>
         </div>
       </div>
-      <p className="text-gray-700 mb-8">{description}</p>
-      <button className={`w-full py-3 rounded-lg font-medium transition-colors ${buttonStyles[buttonVariant]}`}>
+      <p className="text-gray-700 mb-layout-lg text-body">{description}</p>
+      <button className={`w-full ${buttonClasses[buttonVariant]}`}>
         Commencer
       </button>
     </div>

@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#00264d]">
+    <div className="min-h-screen bg-neutral-darker">
       <Entete currentView={currentView} handleNavigate={handleNavigate} />
       <ContenuPrincipal currentView={currentView} handleNavigate={handleNavigate} />
       <PiedDePage onNavigate={handleNavigate} />

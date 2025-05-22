@@ -2,16 +2,16 @@ import React from 'react';
 
 const ConditionsGenerales: React.FC = () => {
   return (
-    <section className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold text-[#1A1A1A] mb-4">
+    <section className="section bg-neutral-light">
+      <div className="container">
+        <h1 className="text-neutral mb-layout-sm">
           Conditions Générales
         </h1>
-        <p className="text-gray-600 mb-12">
+        <p className="text-neutral-dark opacity-80 mb-layout-xl text-small">
           Dernière Mise à Jour: 22 Avr 2024
         </p>
 
-        <div className="prose prose-lg max-w-none space-y-8 text-gray-700">
+        <div className="prose prose-lg max-w-none space-y-layout-lg text-neutral-dark opacity-90 text-body">
           <p>
             Lorem ipsum dolor sit amet consectetur. Non in convallis rhoncus ipsum et aliquam tellus lectus. 
             Nam convallis tellus ultrices integer urna proin at tempor bibendum. Libero lectus pretium nibh 

@@ -1,17 +1,17 @@
 import React from 'react';
 
 const NeedMoreHelpSection: React.FC = () => (
-  <div className="bg-white py-24">
-    <div className="max-w-7xl mx-auto px-8">
+  <div className="section bg-white">
+    <div className="container">
       <div className="text-center">
-        <h2 className="text-5xl font-bold text-[#1A1A1A] mb-16">
+        <h2 className="text-display-2 text-neutral mb-section-sm">
           Besoin d'Assistance ?
         </h2>
-        <div className="flex justify-center gap-6">
-          <button className="px-12 py-4 bg-[#1A73E8] text-white rounded-lg text-xl font-medium hover:bg-[#1557b0] transition-colors">
+        <div className="flex justify-center gap-layout-md">
+          <button className="btn-secondary btn-lg">
             Centre d'Aide
           </button>
-          <button className="px-12 py-4 text-[#1A73E8] border-2 border-[#1A73E8] rounded-lg text-xl font-medium hover:bg-[#f5f8ff] transition-colors">
+          <button className="btn-outline btn-lg border-secondary text-secondary hover:bg-secondary-light">
             Nous Contacter
           </button>
         </div>

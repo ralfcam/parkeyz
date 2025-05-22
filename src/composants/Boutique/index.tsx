@@ -11,7 +11,9 @@ interface BoutiqueProps {
 
 const Boutique: React.FC<BoutiqueProps> = ({ onNavigate }) => {
   return (
-    <section className="min-h-screen">
+    // The individual sections will apply their own padding and background if needed.
+    // This top-level section primarily serves as a container.
+    <section>
       <HeroSection />
       <ProductSection onNavigate={onNavigate} />
       <ReadyToMasterSection />

@@ -92,7 +92,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 
 ## 6 · Timeline Heat-Map
 ```
-Sprint 0 (🛠️) | ▓▓▓▓▓▓░░░░░░   May 2025
+Sprint 0 (🛠️) | ▓▓▓▓▓▓░░░░░   May 2025
 MVP v1.0 (🚀) | ░▓▓▓▓▓▓▓░░░   Jun–Aug 2025
 Growth  (📈)  | ░░░▓▓▓▓▓▓▓▓   Sep–Dec 2025
 Future (🌐)   | ░░░░░░░░▓▓▓   2026+

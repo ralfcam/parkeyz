@@ -2,11 +2,11 @@ import React from 'react';
 
 const AppelActionContact: React.FC = () => {
   return (
-    <section className="py-24 px-8 bg-gray-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="section bg-neutral-light relative overflow-hidden">
+      <div className="container">
         <div className="flex justify-between items-center">
           {/* Illustration Gauche - Cachée sur mobile */}
-          <div className="w-1/4 -ml-8 hidden md:flex items-center">
+          <div className="w-1/4 -ml-layout-lg hidden md:flex items-center">
             <img 
               src="/contact&faq1.svg" 
               alt="Illustration de Panneaux de Stationnement"
@@ -15,20 +15,20 @@ const AppelActionContact: React.FC = () => {
           </div>
 
           {/* Contenu Central */}
-          <div className="text-center max-w-2xl mx-auto px-4 md:px-8">
-            <span className="inline-block px-6 py-2 mb-6 text-[#1A73E8] bg-[#e6f7ff] rounded-full text-sm font-medium">
+          <div className="text-center max-w-2xl mx-auto px-layout-sm md:px-layout-lg">
+            <span className="inline-block px-6 py-2 mb-layout-md text-secondary bg-secondary-light rounded-btn text-sm font-medium">
               Contact & FAQ
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-8">
+            <h2 className="text-neutral-dark mb-layout-lg">
               Des Questions? Nous Sommes Là Pour Vous Aider
             </h2>
-            <button className="px-8 py-4 bg-[#1A73E8] text-white rounded-full text-lg font-medium hover:bg-[#1557b0] transition-colors">
+            <button className="btn-secondary btn-lg">
               Contactez-Nous
             </button>
           </div>
 
           {/* Illustration Droite - Cachée sur mobile */}
-          <div className="w-1/4 -mr-8 hidden md:flex items-center translate-y-6">
+          <div className="w-1/4 -mr-layout-lg hidden md:flex items-center translate-y-6">
             <img 
               src="/contact&faq2.svg" 
               alt="Illustration d'Espace de Stationnement"

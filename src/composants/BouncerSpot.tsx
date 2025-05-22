@@ -12,16 +12,16 @@ const FeatureCard = ({
   description: string; 
   isHighlighted?: boolean;
 }) => (
-  <div className={`p-8 rounded-2xl text-center ${
+  <div className={`p-layout-lg rounded-card text-center ${
     isHighlighted 
-      ? 'bg-[#00b8ff] text-white' 
-      : 'bg-white text-gray-800'
+      ? 'bg-primary text-white' 
+      : 'card' // Use the .card class for non-highlighted
   }`}>
-    <div className="flex justify-center mb-6">
-      <Icon className={`w-12 h-12 ${isHighlighted ? 'text-white' : 'text-[#00b8ff]'}`} />
+    <div className="flex justify-center mb-layout-md">
+      <Icon className={`w-12 h-12 ${isHighlighted ? 'text-white' : 'text-primary'}`} />
     </div>
-    <h3 className="text-xl font-semibold mb-4">{title}</h3>
-    <p className={`${isHighlighted ? 'text-white/90' : 'text-gray-600'}`}>
+    <h3 className={`text-xl font-semibold mb-layout-sm ${isHighlighted ? 'text-white' : 'text-neutral'}`}>{title}</h3>
+    <p className={`${isHighlighted ? 'text-white opacity-90' : 'text-neutral-dark opacity-80'} text-body`}>
       {description}
     </p>
   </div>
@@ -29,9 +29,9 @@ const FeatureCard = ({
 
 const BouncerSpot = () => {
   return (
-    <section className="py-24 px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="section bg-neutral-light">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-layout-lg">
           <FeatureCard
             icon={Clock}
             title="Gain de Temps"
@@ -50,7 +50,7 @@ const BouncerSpot = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-layout-lg mt-layout-lg">
           <FeatureCard
             icon={Car}
             title="Design Élégant"

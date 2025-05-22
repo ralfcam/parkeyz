@@ -19,8 +19,8 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
   };
 
   return (
-    <header className="py-4 px-8">
-      <div className="max-w-7xl mx-auto">
+    <header className="py-layout-md px-layout-lg">
+      <div className="container">
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => handleNavigate('home')}>
             <img 
@@ -39,7 +39,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
           <nav className="hidden md:flex space-x-8">
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('home');
@@ -49,7 +49,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
             </a>
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('a-propos');
@@ -59,7 +59,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
             </a>
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('tutorials'); // This routing key might change later
@@ -69,7 +69,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
             </a>
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('pricing'); // This routing key might change later
@@ -79,7 +79,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
             </a>
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('contact'); // This routing key might change later
@@ -89,7 +89,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
             </a>
             <a 
               href="#" 
-              className="text-white hover:text-[#00b8ff] transition-colors"
+              className="text-white hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('shop'); // This routing key might change later
@@ -102,12 +102,12 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
           <div className="flex items-center space-x-6">
             <div className="relative">
               <ShoppingCart className="h-6 w-6 text-white" />
-              <span className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center text-xs bg-[#00b8ff] rounded-full text-white">
+              <span className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center text-xs bg-primary rounded-full text-white">
                 0
               </span>
             </div>
             <Globe className="h-6 w-6 text-white hidden sm:block" />
-            <button className="hidden sm:block px-8 py-2 text-white bg-[#00b8ff] rounded-full hover:bg-[#0099ff] transition-colors">
+            <button className="hidden sm:block btn-primary">
               Connexion
             </button>
             
@@ -123,11 +123,11 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
         
         {/* Menu de navigation mobile */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 bg-[#003366] rounded-lg p-4 absolute left-0 right-0 mx-4 z-50">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden mt-layout-md bg-neutral-dark rounded-lg p-layout-md absolute left-0 right-0 mx-layout-md z-50">
+            <nav className="flex flex-col space-y-layout-sm">
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('home');
@@ -137,7 +137,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               </a>
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('a-propos');
@@ -147,7 +147,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               </a>
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('tutorials'); // Routing key
@@ -157,7 +157,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               </a>
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('pricing'); // Routing key
@@ -167,7 +167,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               </a>
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('contact'); // Routing key
@@ -177,7 +177,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               </a>
               <a 
                 href="#" 
-                className="text-white hover:text-[#00b8ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#004080]"
+                className="text-white hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-neutral-darker"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick('shop'); // Routing key
@@ -185,7 +185,7 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               >
                 Boutique
               </a>
-              <button className="w-full text-center py-2 text-white bg-[#00b8ff] rounded-full hover:bg-[#0099ff] transition-colors">
+              <button className="w-full text-center btn-primary">
                 Connexion
               </button>
             </nav>

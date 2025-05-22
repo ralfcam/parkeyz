@@ -10,8 +10,8 @@ interface TeamMemberProps {
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, linkedIn, description }) => (
-  <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all">
-    <div className="relative mb-6 group">
+  <div className="card p-layout-md">
+    <div className="relative mb-layout-md group">
       <img
         src={image}
         alt={name}
@@ -26,15 +26,15 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, linkedIn, de
           href={linkedIn}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute bottom-layout-sm right-layout-sm bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity"
         >
-          <Linkedin className="w-5 h-5 text-[#0077b5]" />
+          <Linkedin className="w-5 h-5 text-secondary" />
         </a>
       )}
     </div>
-    <h3 className="text-xl font-bold text-[#1A1A1A] mb-1">{name}</h3>
-    <p className="text-[#00b8ff] font-medium mb-4">{role}</p>
-    <p className="text-gray-600 leading-relaxed">{description}</p>
+    <h3 className="text-neutral mb-1">{name}</h3>
+    <p className="text-primary font-medium mb-layout-sm text-body">{role}</p>
+    <p className="text-neutral-dark opacity-80 leading-relaxed text-body">{description}</p>
   </div>
 );
 
@@ -71,22 +71,22 @@ const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <span className="inline-block px-6 py-2 bg-[#e6f7ff] text-[#00b8ff] rounded-full text-sm font-medium mb-4">
+    <section className="section bg-neutral-light">
+      <div className="container">
+        <div className="text-center mb-section-sm">
+          <span className="inline-block px-6 py-2 bg-primary-light text-primary rounded-btn text-sm font-medium mb-layout-sm">
             Notre Équipe
           </span>
-          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-6">
+          <h2 className="text-neutral mb-layout-md">
             Les Visages Derrière l'Innovation
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-neutral-dark opacity-80 max-w-3xl mx-auto text-body-large">
             Une équipe passionnée qui travaille chaque jour pour révolutionner
             l'expérience du stationnement et créer un avenir plus intelligent.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-layout-lg">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} {...member} />
           ))}

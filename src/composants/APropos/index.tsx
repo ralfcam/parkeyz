@@ -11,7 +11,9 @@ import ReadyToUnlockSection from './ReadyToUnlockSection';
 
 const APropos: React.FC = () => {
   return (
-    <section className="min-h-screen">
+    // The individual sections will apply their own padding and background if needed.
+    // This top-level section primarily serves as a container.
+    <section>
       <HeroSection />
       <OurStorySection />
       <CeQueNousFaisons />

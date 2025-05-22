@@ -18,50 +18,50 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
   features,
   isHighlighted = false 
 }) => (
-  <div className={`rounded-2xl p-8 transition-shadow ${
+  <div className={`rounded-card p-layout-lg transition-shadow flex flex-col h-full ${
     isHighlighted 
-      ? 'bg-[#1A73E8] text-white' 
-      : 'bg-white text-gray-800'
+      ? 'bg-secondary text-white'
+      : 'card'
   }`}>
-    <div className="flex justify-center mb-8">
+    <div className="flex justify-center mb-layout-lg">
       <img 
         src={image} 
         alt={title} 
         className="w-48 h-48 object-contain"
         onError={(e) => {
           const target = e.target as HTMLImageElement;
-          target.src = 'https://placehold.co/192x192/e6f7ff/003366?text=Solution+Parkeeyz';
+          target.src = 'https://placehold.co/192x192/primary-light/neutral-dark?text=Solution+Parkeeyz';
         }}
       />
     </div>
-    <h3 className={`text-2xl font-bold mb-4 ${isHighlighted ? 'text-white' : 'text-[#1A1A1A]'}`}>
+    <h3 className={`text-heading-3 font-bold mb-layout-sm ${isHighlighted ? 'text-white' : 'text-neutral'}`}>
       {title}
     </h3>
-    <p className={`mb-6 ${isHighlighted ? 'text-white/90' : 'text-gray-600'}`}>
+    <p className={`mb-layout-md flex-grow ${isHighlighted ? 'text-white opacity-90' : 'text-neutral-dark opacity-80'} text-body`}>
       {description}
     </p>
-    <div className="flex items-baseline mb-6">
-      <span className={`text-3xl font-bold ${isHighlighted ? 'text-white' : 'text-[#1A73E8]'}`}>
+    <div className="flex items-baseline mb-layout-md">
+      <span className={`text-display-2 font-bold ${isHighlighted ? 'text-white' : 'text-secondary'}`}>
         {price}
       </span>
-      <span className={`ml-2 ${isHighlighted ? 'text-white/80' : 'text-gray-600'}`}>
+      <span className={`ml-2 ${isHighlighted ? 'text-white opacity-80' : 'text-neutral-dark opacity-80'} text-small`}>
         /mois
       </span>
     </div>
-    <ul className="space-y-3 mb-8">
+    <ul className="space-y-layout-xs mb-layout-lg flex-grow">
       {features.map((feature, index) => (
         <li key={index} className="flex items-center gap-2">
-          <ShieldCheck className={`w-5 h-5 ${isHighlighted ? 'text-white' : 'text-[#1A73E8]'}`} />
-          <span className={isHighlighted ? 'text-white/90' : 'text-gray-600'}>
+          <ShieldCheck className={`w-5 h-5 ${isHighlighted ? 'text-white' : 'text-secondary'}`} />
+          <span className={`${isHighlighted ? 'text-white opacity-90' : 'text-neutral-dark opacity-80'} text-body`}>
             {feature}
           </span>
         </li>
       ))}
     </ul>
-    <button className={`w-full py-3 rounded-lg font-medium transition-colors ${
+    <button className={`w-full btn btn-lg mt-auto ${
       isHighlighted 
-        ? 'bg-white text-[#1A73E8] hover:bg-gray-100' 
-        : 'bg-[#1A73E8] text-white hover:bg-[#1557b0]'
+        ? 'bg-white text-secondary hover:bg-gray-100'
+        : 'btn-secondary'
     }`}>
       Découvrir
     </button>
@@ -110,63 +110,63 @@ const CeQueNousFaisons: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <span className="inline-block px-6 py-2 bg-[#e6f7ff] text-[#00b8ff] rounded-full text-sm font-medium mb-4">
+    <section className="section bg-neutral-light">
+      <div className="container">
+        <div className="text-center mb-section-sm">
+          <span className="inline-block px-6 py-2 bg-primary-light text-primary rounded-btn text-sm font-medium mb-layout-sm">
             Nos Solutions
           </span>
-          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-6">
+          <h2 className="text-neutral mb-layout-md">
             Ce que nous faisons
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-neutral-dark opacity-80 max-w-3xl mx-auto text-body-large">
             Parkeeyz propose des solutions d'accès intelligent de pointe qui combinent la technologie Bluetooth et la 4G 
             pour garantir une gestion de stationnement sécurisée, fiable et conviviale. Des allées privées 
             aux installations de stationnement urbaines, nos produits répondent à une large gamme de besoins.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-layout-lg mb-section-sm">
           {solutions.map((solution, index) => (
             <SolutionCard key={index} {...solution} />
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 md:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="card p-layout-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-section-sm items-center">
             <div>
-              <span className="text-[#00b8ff] text-xl font-semibold mb-4 block">
+              <span className="text-primary text-xl font-semibold mb-layout-sm block">
                 Notre Technologie
               </span>
-              <h3 className="text-3xl font-bold text-[#1A1A1A] mb-6">
+              <h3 className="text-neutral mb-layout-md">
                 Une Solution Complète et Innovante
               </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-neutral-dark opacity-90 mb-layout-lg leading-relaxed text-body-large">
                 Notre technologie de pointe combine sécurité avancée et facilité d'utilisation 
                 pour offrir une expérience de stationnement sans précédent. Adaptée aussi bien 
                 aux particuliers qu'aux professionnels.
               </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <div className="w-6 h-6 bg-[#e6f7ff] rounded-full flex items-center justify-center">
-                    <ShieldCheck className="w-4 h-4 text-[#00b8ff]" />
+              <ul className="space-y-layout-sm mb-layout-lg">
+                <li className="flex items-center gap-3 text-neutral-dark opacity-90 text-body">
+                  <div className="w-6 h-6 bg-primary-light rounded-full flex items-center justify-center flex-shrink-0">
+                    <ShieldCheck className="w-4 h-4 text-primary" />
                   </div>
                   Sécurité maximale garantie
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <div className="w-6 h-6 bg-[#e6f7ff] rounded-full flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-[#00b8ff]" />
+                <li className="flex items-center gap-3 text-neutral-dark opacity-90 text-body">
+                  <div className="w-6 h-6 bg-primary-light rounded-full flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-4 h-4 text-primary" />
                   </div>
                   Installation rapide et simple
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <div className="w-6 h-6 bg-[#e6f7ff] rounded-full flex items-center justify-center">
-                    <Users className="w-4 h-4 text-[#00b8ff]" />
+                <li className="flex items-center gap-3 text-neutral-dark opacity-90 text-body">
+                  <div className="w-6 h-6 bg-primary-light rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-primary" />
                   </div>
                   Gestion multi-utilisateurs flexible
                 </li>
               </ul>
-              <button className="px-8 py-4 bg-[#1A1A1A] text-white rounded-full text-lg font-medium hover:bg-[#333] transition-colors">
+              <button className="btn-primary bg-neutral-dark hover:bg-neutral-darker btn-lg">
                 En Savoir Plus
               </button>
             </div>
@@ -174,7 +174,7 @@ const CeQueNousFaisons: React.FC = () => {
               <img 
                 src="/whatwedo1.svg" 
                 alt="Solution Parkeeyz"
-                className="w-full h-auto rounded-xl"
+                className="w-full h-auto rounded-card shadow-card"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';

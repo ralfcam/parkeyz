@@ -11,58 +11,58 @@ interface DetailProduitProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title }) => (
-  <div className="bg-white rounded-xl p-6 text-center">
-    <div className="flex justify-center mb-4">
-      <Icon className="w-8 h-8 text-[#1A73E8]" />
+  <div className="card p-layout-md text-center">
+    <div className="flex justify-center mb-layout-sm">
+      <Icon className="w-8 h-8 text-secondary" />
     </div>
-    <h3 className="text-[#1A1A1A] font-medium">{title}</h3>
+    <h3 className="text-neutral font-medium text-body">{title}</h3>
   </div>
 );
 
 const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
   return (
-    <section className="min-h-screen bg-gray-50">
+    <section className="section bg-neutral-light">
       {/* Section Principale du Produit */}
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="mb-16">
-          <span className="text-[#00b8ff] text-xl">Bouncer Key</span>
-          <h1 className="text-4xl font-bold text-[#1A1A1A] mt-2 mb-6">
+      <div className="container">
+        <div className="mb-section-sm">
+          <span className="text-primary text-xl font-semibold">Bouncer Key</span>
+          <h1 className="text-neutral mt-2 mb-layout-md">
             Sécurisez Votre Stationnement, Sans Effort
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
+          <p className="text-xl text-neutral-dark opacity-80 max-w-2xl text-body-large">
             Prenez le contrôle de votre espace de stationnement avec Bouncer Key, un dispositif de contrôle 
             d'accès compact conçu pour les solutions de stationnement individuelles et à 
             petite échelle. Dites adieu aux accès non autorisés et profitez d'une tranquillité d'esprit totale.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-section-sm items-center">
           <div>
             <img 
               src="/shopbouncer.svg" 
               alt="Dispositif de Stationnement Bouncer Key"
-              className="w-full h-auto max-w-xl mx-auto rounded-2xl"
+              className="w-full h-auto max-w-xl mx-auto rounded-card shadow-card"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = 'https://placehold.co/600x600/e6f7ff/003366?text=Bouncer+Key+Device';
+                target.src = 'https://placehold.co/600x600/primary-light/neutral-dark?text=Bouncer+Key+Device';
               }}
             />
           </div>
 
           <div>
-            <div className="text-4xl font-bold text-[#1A73E8] mb-8">
+            <div className="text-display-1 text-secondary mb-layout-lg">
               99,99€
             </div>
 
             <button 
-              className="w-full py-4 bg-[#1A73E8] text-white rounded-xl text-lg font-medium hover:bg-[#1557b0] transition-colors mb-6"
+              className="btn-secondary btn-lg w-full mb-layout-md"
               onClick={() => onNavigate('shipping')}
             >
               Acheter Maintenant
             </button>
 
             {/* Fonctionnalités Clés */}
-            <div className="grid grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-2 gap-layout-md mb-section-sm">
               <FeatureCard 
                 icon={Key} 
                 title="Accès Bluetooth" 
@@ -82,35 +82,35 @@ const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
             </div>
 
             {/* Tableau des Spécifications */}
-            <div className="bg-white rounded-xl overflow-hidden">
+            <div className="card overflow-hidden p-0">
               <div className="grid grid-cols-2">
-                <div className="p-4 font-medium text-[#1A1A1A] bg-[#f8fafc]">
+                <div className="p-layout-md font-medium text-neutral bg-neutral-light">
                   Détails
                 </div>
-                <div className="p-4 font-medium text-[#1A1A1A] bg-[#f8fafc]">
+                <div className="p-layout-md font-medium text-neutral bg-neutral-light">
                   Spécifications
                 </div>
               </div>
-              <div className="divide-y">
+              <div className="divide-y divide-gray-200 text-body">
                 <div className="grid grid-cols-2">
-                  <div className="p-4 text-gray-600">Poids</div>
-                  <div className="p-4">4,95kg</div>
+                  <div className="p-layout-md text-neutral-dark opacity-80">Poids</div>
+                  <div className="p-layout-md text-neutral">4,95kg</div>
                 </div>
                 <div className="grid grid-cols-2">
-                  <div className="p-4 text-gray-600">Buzzer</div>
-                  <div className="p-4">Conseils de stationnement</div>
+                  <div className="p-layout-md text-neutral-dark opacity-80">Buzzer</div>
+                  <div className="p-layout-md text-neutral">Conseils de stationnement</div>
                 </div>
                 <div className="grid grid-cols-2">
-                  <div className="p-4 text-gray-600">Batterie</div>
-                  <div className="p-4">Pile sèche/primaire de taille D 1,5v × 4 alcaline de haute qualité</div>
+                  <div className="p-layout-md text-neutral-dark opacity-80">Batterie</div>
+                  <div className="p-layout-md text-neutral">Pile sèche/primaire de taille D 1,5v × 4 alcaline de haute qualité</div>
                 </div>
                 <div className="grid grid-cols-2">
-                  <div className="p-4 text-gray-600">Capteur</div>
-                  <div className="p-4">Capteur ultrasonique</div>
+                  <div className="p-layout-md text-neutral-dark opacity-80">Capteur</div>
+                  <div className="p-layout-md text-neutral">Capteur ultrasonique</div>
                 </div>
                 <div className="grid grid-cols-2">
-                  <div className="p-4 text-gray-600">Matériau</div>
-                  <div className="p-4">Coque en aluminium</div>
+                  <div className="p-layout-md text-neutral-dark opacity-80">Matériau</div>
+                  <div className="p-layout-md text-neutral">Coque en aluminium</div>
                 </div>
               </div>
             </div>
@@ -118,19 +118,19 @@ const DetailProduit: React.FC<DetailProduitProps> = ({ onNavigate }) => {
         </div>
 
         {/* Témoignages */}
-        <div className="mt-24">
-          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-12 text-center">
+        <div className="mt-section-lg">
+          <h2 className="text-neutral mb-section-sm text-center">
             Ce Que Disent Nos Clients
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-layout-lg">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-8 rounded-xl">
-                <div className="text-[#00b8ff] text-6xl mb-4">"</div>
-                <p className="text-gray-600 mb-6">
+              <div key={i} className="card p-layout-lg">
+                <div className="text-primary text-6xl mb-layout-sm">"</div>
+                <p className="text-neutral-dark opacity-80 mb-layout-md text-body">
                   Lorem ipsum dolor sit amet consectetur. Risus quam tincidunt 
                   pulvinar quam blandit eu erat mus ipsum. Gravida cursus a
                 </p>
-                <p className="font-medium text-[#1A1A1A]">– A. Dupont</p>
+                <p className="font-medium text-neutral text-body">– A. Dupont</p>
               </div>
             ))}
           </div>

@@ -4,78 +4,87 @@
 
 @layer base {
   html {
-    font-family: Inter, system-ui, sans-serif;
+    @apply font-sans antialiased text-neutral;
   }
   
-  body {
-    @apply antialiased;
+  h1 {
+    @apply text-heading-1 mb-6;
+  }
+  
+  h2 {
+    @apply text-heading-2 mb-4;
+  }
+  
+  h3 {
+    @apply text-heading-3 mb-3;
+  }
+  
+  p {
+    @apply text-body mb-4;
   }
 }
 
 @layer components {
+  .btn {
+    @apply inline-flex items-center justify-center transition-colors rounded-btn font-medium;
+  }
+  
   .btn-primary {
-    @apply px-4 py-2 text-sm font-medium text-white bg-[#00b8ff] rounded-full hover:bg-[#0099ff] transition-colors;
+    @apply btn bg-primary hover:bg-primary-dark text-white px-4 py-2;
   }
   
   .btn-secondary {
-    @apply px-4 py-2 text-sm font-medium text-[#00b8ff] hover:text-[#0099ff] transition-colors;
+    @apply btn bg-secondary hover:bg-secondary-dark text-white px-4 py-2;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary-light px-4 py-2;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-body-large;
+  }
+
+  .input {
+    @apply w-full p-3 rounded-input border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .card {
+    @apply bg-white rounded-card shadow-card hover:shadow-card-hover transition-shadow p-layout-md;
+  }
+
+  .card-featured {
+    @apply bg-primary-light rounded-card shadow-card hover:shadow-card-hover transition-shadow p-layout-lg;
+  }
+
+  .section {
+    @apply py-section-md px-layout-lg;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-layout-md;
   }
 }
 
-/* Ajustements pour la réactivité mobile */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.25rem;
+    @apply text-heading-2;
   }
   
   h2 {
-    font-size: 1.875rem;
+    @apply text-heading-3;
   }
   
-  .text-6xl {
-    font-size: 2.25rem;
+  h3 {
+    @apply text-body-large font-semibold;
   }
   
-  .text-5xl {
-    font-size: 1.875rem;
+  .section {
+    @apply py-section-sm px-layout-md;
   }
   
-  .text-4xl {
-    font-size: 1.5rem;
-  }
-  
-  .text-3xl {
-    font-size: 1.25rem;
-  }
-  
-  .text-2xl {
-    font-size: 1.125rem;
-  }
-  
-  .py-24 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  
-  .py-16 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  
-  .px-12 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .gap-16 {
-    gap: 2rem;
-  }
-  
-  .mb-16 {
-    margin-bottom: 2rem;
-  }
-  
-  .mb-12 {
-    margin-bottom: 1.5rem;
+  .container {
+    @apply px-layout-sm;
   }
 }

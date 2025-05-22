@@ -2,15 +2,15 @@ import React from 'react';
 
 const PolitiqueConfidentialite: React.FC = () => {
   return (
-    <section className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold text-[#1A1A1A] mb-12">
+    <section className="section bg-neutral-light">
+      <div className="container">
+        <h1 className="text-neutral mb-layout-xl">
           Politique de Confidentialité
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div className="prose prose-lg max-w-none text-gray-700">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-section-sm">
+          <div className="space-y-layout-lg">
+            <div className="prose prose-lg max-w-none text-neutral-dark opacity-90 text-body">
               <p>
                 Lorem ipsum dolor sit amet consectetur. Non in convallis 
                 rhoncus ipsum et aliquam tellus lectus. Nam convallis tellus 
@@ -39,15 +39,15 @@ const PolitiqueConfidentialite: React.FC = () => {
               <img 
                 src="/parkingillustration.svg" 
                 alt="Illustration de Stationnement"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-card shadow-card"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = 'https://placehold.co/600x300/003366/e6f7ff?text=Parking+Illustration';
+                  target.src = 'https://placehold.co/600x300/neutral-dark/primary-light?text=Parking+Illustration';
                 }}
               />
             </div>
 
-            <div className="prose prose-lg max-w-none text-gray-700">
+            <div className="prose prose-lg max-w-none text-neutral-dark opacity-90 text-body">
               <p>
                 Lorem ipsum dolor sit amet consectetur. Non in convallis 
                 rhoncus ipsum et aliquam tellus lectus. Nam convallis tellus 
@@ -70,7 +70,7 @@ const PolitiqueConfidentialite: React.FC = () => {
               className="w-96 h-96 object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = 'https://placehold.co/384x384/e6f7ff/003366?text=P';
+                target.src = 'https://placehold.co/384x384/primary-light/neutral-dark?text=P';
               }}
             />
           </div>

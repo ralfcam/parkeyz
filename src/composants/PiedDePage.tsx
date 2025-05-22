@@ -9,12 +9,12 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
 
   return (
-    <footer className="bg-[#00264d] text-white py-16">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-neutral-darker text-white py-section-md">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-layout-xl">
           {/* Logo et Description */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-2 mb-layout-md">
               <img 
                 src="/parkeeyzlogo.svg" 
                 alt="Logo PARKEEYZ" 
@@ -28,19 +28,19 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
                 PARKEEYZ
               </span>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-body">
               Votre solution de stationnement intelligente. Sécurisez, contrôlez et gérez votre espace de stationnement en toute simplicité.
             </p>
           </div>
 
           {/* Liens rapides */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Liens Rapides</h3>
-            <ul className="space-y-4">
+            <h3 className="text-xl font-semibold mb-layout-md">Liens Rapides</h3>
+            <ul className="space-y-layout-sm">
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate('home');
@@ -52,7 +52,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate('pricing');
@@ -64,7 +64,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate('faq');
@@ -76,7 +76,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors text-body"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate('contact');
@@ -90,8 +90,8 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
 
           {/* Suivez-nous */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Connectez-vous avec nous sur</h3>
-            <div className="flex gap-4 mb-12">
+            <h3 className="text-xl font-semibold mb-layout-md">Connectez-vous avec nous sur</h3>
+            <div className="flex gap-layout-sm mb-layout-xl">
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -107,16 +107,16 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-6">Recevez Les Dernières Nouvelles</h3>
+              <h3 className="text-xl font-semibold mb-layout-md">Recevez Les Dernières Nouvelles</h3>
               <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
                   placeholder="Écrivez votre email ici"
-                  className="flex-1 px-4 py-2 rounded-lg sm:rounded-r-none bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00b8ff]"
+                  className="input flex-1 sm:rounded-r-none text-neutral bg-white placeholder-gray-500"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <button className="px-6 py-2 bg-[#00b8ff] text-white rounded-lg sm:rounded-l-none font-medium hover:bg-[#0099ff] transition-colors">
+                <button className="btn-primary sm:rounded-l-none">
                   S'abonner
                 </button>
               </div>
@@ -125,7 +125,7 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Barre inférieure */}
-        <div className="mt-16 pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
+        <div className="mt-section-sm pt-layout-lg border-t border-white/10 text-center text-gray-400 text-sm">
           <p className="flex flex-col sm:flex-row justify-center items-center gap-2">
             <span>Copyright © 2025 PARKEEYZ | Tous Droits Réservés</span>
             <span className="hidden sm:inline">|</span>

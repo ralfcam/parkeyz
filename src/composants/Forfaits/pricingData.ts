@@ -25,18 +25,18 @@ export const plans = [
     name: "Keeyz Basique",
     price: "33",
     description: "Accès sécurisé pour 1 place de stationnement.",
-    buttonVariant: "light" as const
+    buttonVariant: "accent" as const
   },
   {
     name: "Keeyz Standard",
     price: "55",
     description: "Contrôle multi-espaces, notifications en temps réel.",
-    buttonVariant: "primary" as const
+    buttonVariant: "secondary" as const
   },
   {
     name: "Keeyz Or",
     price: "99",
     description: "Suite complète: Gestion d'accès illimitée + support premium.",
-    buttonVariant: "dark" as const
+    buttonVariant: "neutral-dark" as const
   }
 ]; 

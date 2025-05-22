@@ -5,7 +5,7 @@ interface VideoCardProps {
   title: string;
   icon?: React.ElementType;
   description: string;
-  buttonVariant?: 'primary' | 'dark' | 'light';
+  buttonVariant?: 'secondary' | 'neutral-dark' | 'accent';
   imageSrc?: string;
 }
 
@@ -13,18 +13,18 @@ const VideoCard: React.FC<VideoCardProps> = ({
   title, 
   icon: Icon, 
   description, 
-  buttonVariant = 'primary',
+  buttonVariant = 'secondary',
   imageSrc 
 }) => {
-  const buttonStyles = {
-    primary: 'bg-[#1A73E8] hover:bg-[#1557b0] text-white',
-    dark: 'bg-[#003366] hover:bg-[#002347] text-white',
-    light: 'bg-[#00D2FF] hover:bg-[#00bfe6] text-white'
+  const buttonClasses = {
+    secondary: 'btn-secondary',
+    'neutral-dark': 'btn-primary bg-neutral-dark hover:bg-neutral-darker',
+    accent: 'btn-primary bg-accent hover:bg-accent-dark',
   };
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all flex flex-col">
-      <div className="mb-6 flex justify-center">
+    <div className="card flex flex-col p-layout-lg">
+      <div className="mb-layout-md flex justify-center">
         {imageSrc ? (
           <img 
             src={imageSrc} 
@@ -32,17 +32,17 @@ const VideoCard: React.FC<VideoCardProps> = ({
             className="w-24 h-24 object-contain"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = 'https://placehold.co/96x96/e6f7ff/003366?text=Icon';
+              target.src = 'https://placehold.co/96x96/primary-light/neutral-dark?text=Icon';
             }}
           />
         ) : Icon ? (
-          <Icon className="w-12 h-12 text-[#1A73E8]" />
+          <Icon className="w-12 h-12 text-secondary" />
         ) : null}
       </div>
-      <h3 className="text-xl font-semibold text-[#1A1A1A] mb-3 text-center">{title}</h3>
-      <p className="text-gray-600 mb-6 text-center flex-grow">{description}</p>
+      <h3 className="text-center mb-layout-sm">{title}</h3>
+      <p className="text-gray-600 mb-layout-md text-center flex-grow text-body">{description}</p>
       <button 
-        className={`w-full py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 mt-auto ${buttonStyles[buttonVariant]}`}
+        className={`w-full ${buttonClasses[buttonVariant]} flex items-center justify-center gap-2 mt-auto`}
       >
         Regarder Maintenant
         <Play className="w-4 h-4" />

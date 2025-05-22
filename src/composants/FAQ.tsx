@@ -11,22 +11,22 @@ const FAQItem: React.FC<FAQItemProps> = ({ number, question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-[#f5f8ff] rounded-lg overflow-hidden mb-4 hover:bg-[#e8f0ff] transition-colors">
+    <div className="bg-secondary-light rounded-input overflow-hidden mb-layout-sm hover:bg-primary-light transition-colors">
       <button
-        className="w-full px-4 md:px-8 py-4 md:py-6 flex items-start md:items-center text-left"
+        className="w-full px-layout-sm md:px-layout-lg py-layout-sm md:py-layout-md flex items-start md:items-center text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-base md:text-xl font-semibold text-[#1A73E8] mr-3 md:mr-12 whitespace-nowrap mt-1 md:mt-0">Q{' '}<span className="hidden md:inline">No</span> {number}</span>
-        <span className="text-lg md:text-2xl font-medium text-[#003366] flex-grow pr-2">{question}</span>
+        <span className="text-body md:text-heading-3 font-semibold text-secondary mr-layout-xs md:mr-layout-lg whitespace-nowrap mt-1 md:mt-0">Q{' '}<span className="hidden md:inline">No</span> {number}</span>
+        <span className="text-body-large md:text-heading-2 font-medium text-neutral-dark flex-grow pr-2">{question}</span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 md:h-6 md:w-6 text-[#1A73E8] flex-shrink-0 mt-1 md:mt-0" />
+          <ChevronUp className="h-5 w-5 md:h-6 md:w-6 text-secondary flex-shrink-0 mt-1 md:mt-0" />
         ) : (
-          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-[#1A73E8] flex-shrink-0 mt-1 md:mt-0" />
+          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-secondary flex-shrink-0 mt-1 md:mt-0" />
         )}
       </button>
       {isOpen && (
-        <div className="px-4 md:px-8 pb-6 pt-2">
-          <p className="text-[#003366]/80 text-base md:text-lg ml-0 md:ml-28">{answer}</p>
+        <div className="px-layout-sm md:px-layout-lg pb-layout-md pt-layout-xs">
+          <p className="text-neutral-dark opacity-80 text-body md:text-body-large ml-0 md:ml-28">{answer}</p>
         </div>
       )}
     </div>
@@ -63,9 +63,9 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#003366] mb-8 md:mb-12">
+    <section className="section bg-white">
+      <div className="container">
+        <h2 className="text-neutral-dark mb-section-sm text-center md:text-left">
           FAQ
         </h2>
         <div>

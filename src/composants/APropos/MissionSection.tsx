@@ -1,9 +1,9 @@
 import React from 'react';
 
 const MissionSection: React.FC = () => (
-  <div className="bg-[#f5f8ff] py-24">
-    <div className="max-w-7xl mx-auto px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+  <div className="section bg-secondary-light">
+    <div className="container">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-layout-xl">
         {[
           {
             image: "/missionsection1.svg",
@@ -22,7 +22,7 @@ const MissionSection: React.FC = () => (
           }
         ].map((mission, index) => (
           <div key={index} className="text-center group">
-            <div className="mb-8 relative">
+            <div className="mb-layout-lg relative">
               <div className="w-48 h-48 mx-auto relative">
                 <img
                   src={mission.image}
@@ -31,10 +31,10 @@ const MissionSection: React.FC = () => (
                 />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-[#003366] mb-4 leading-tight">
+            <h3 className="text-heading-3 text-neutral-dark mb-layout-sm leading-tight">
               {mission.title}
             </h3>
-            <p className="text-lg text-[#003366]/70">
+            <p className="text-body text-neutral-dark opacity-80">
               {mission.description}
             </p>
           </div>
