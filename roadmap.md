@@ -1,6 +1,6 @@
 # Parkeys – Development Roadmap
 
-> Last updated: May 2025
+> Last updated: May 2025 (updated June 2025)
 
 ## 1 · Product & Tech Vision  
 Deliver a delightful, high-performance web experience that makes choosing, configuring and purchasing Parkeys parking solutions effortless for users world-wide.
@@ -48,7 +48,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 - [ ] Integrate **React Router v6** → replace `useState` view switch.
 - [ ] Create lightweight **cart context** (React Context + reducer).
 - [ ] Basic **form validation** (React-Hook-Form + Yup) for Contact & Payment.
-- [ ] Tailwind **design tokens** → centralise colours, spacing, typography.
+- [x] Tailwind **design tokens** → centralise colours, spacing, typography.
 - [ ] Replace placeholder images with optimised assets, add <img loading="lazy">.
 - [ ] Linting & formatting: ESLint + Prettier + husky pre-commit.
 

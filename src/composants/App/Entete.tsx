@@ -19,12 +19,12 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
   };
 
   return (
-    <header className="py-layout-md px-layout-lg">
+    <header className="sticky top-0 z-50 py-layout-md px-layout-lg bg-neutral-darker/90 backdrop-blur-md shadow-md">
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => handleNavigate('home')}>
             <img 
-              src="/parkeeyzlogo.svg" 
+              src="/logo.svg" 
               alt="Logo PARKEEYZ" 
               className="h-10 w-auto"
               onError={(e) => {
@@ -32,21 +32,10 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
                 target.src = 'https://placehold.co/40x40/00b8ff/ffffff?text=P';
               }}
             />
-            <span className="ml-2 text-xl font-semibold text-white">PARKEEYZ</span>
           </div>
           
           {/* Navigation de bureau */}
           <nav className="hidden md:flex space-x-8">
-            <a 
-              href="#" 
-              className="text-white hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('home');
-              }}
-            >
-              Accueil
-            </a>
             <a 
               href="#" 
               className="text-white hover:text-primary transition-colors"

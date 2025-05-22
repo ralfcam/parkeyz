@@ -26,7 +26,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Baloo 2', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-1': ['4rem', { lineHeight: '1.1', fontWeight: '700' }],
