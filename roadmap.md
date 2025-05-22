@@ -15,9 +15,9 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 - **Framework**: React 18 + TypeScript
 - **Styling**: Tailwind CSS with custom utility classes in `index.css`
 - **Icons**: lucide-react
-- **State & Navigation**: local `useState` switching inside `App/composants`; no dedicated router/store yet
+- **State & Navigation**: ~~local `useState` switching inside `App/composants`; no dedicated router/store yet~~ React Router v6 for navigation with nested routes and protected routes
 - **Pages / Sections**  
-  `Entete` (header) → `ContenuPrincipal` switcher → individual feature modules inside `composants/`:
+  `Entete` (header) → ~~`ContenuPrincipal` switcher~~ React Router `<Outlet />` → individual feature modules inside `composants/`:
   •  Landing (Hero, Why Parkeeyz, FAQ, Call-to-Action…)  
   •  Pricing (`Forfaits`) with plan comparison  
   •  Boutique (shop) incl. product detail & cart placeholder  
@@ -27,7 +27,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
   •  Checkout flow: Shipping (`InformationsLivraison`) → Payment (`OptionsPaiement`) → Confirmation (TBD)
 - **Build Tooling**: Vite
 
-> 💡 **Gap analysis**: no routing, no global state, no tests, no backend/APIs, no CI/CD, mono-language (🇫🇷 only).
+> 💡 **Gap analysis**: ~~no routing~~, no global state, no tests, no backend/APIs, no CI/CD, mono-language (🇫🇷 only).
 
 ---
 
@@ -35,7 +35,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 
 | Horizon | Outcome | Key Themes |
 |---------|---------|-----------|
-| **Sprint 0 – hardening (≈2 wks)** | Reach "internal demo" quality | Routing • Basic cart state • Form validation • Design polish |
+| **Sprint 0 – hardening (≈2 wks)** | Reach "internal demo" quality | ~~Routing~~ ✅ • Basic cart state • Form validation • Design polish |
 | **Q3 2025** | Production-ready MVP (v1.0) | Auth • Real checkout (Stripe/PayPal) • i18n (🇫🇷/🇬🇧) • Analytics • Unit + E2E tests |
 | **Q4 2025** | Growth & Scale | SSR/Next.js migration • CMS/back-office • Performance (CWV) • CI/CD • SEO |
 | **2026+** | Platform expansion | Mobile app • Micro-services • AI recommendations • B2B portal |
@@ -45,7 +45,11 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 ## 4 · Detailed Task Backlog
 
 ### Sprint 0 · **Codebase Hardening**
-- [ ] Integrate **React Router v6** → replace `useState` view switch.
+- [x] Integrate **React Router v6** → replace `useState` view switch.
+  - ✅ Basic routing setup with route definitions
+  - ✅ Updated components to use React Router navigation
+  - ✅ Implemented nested routes and route protection
+  - ✅ Added scroll restoration and hash navigation
 - [ ] Create lightweight **cart context** (React Context + reducer) (*deferred - UI element commented out*).
 - [ ] Basic **form validation** (React-Hook-Form + Yup) for Contact & Payment.
 - [x] Tailwind **design tokens** → centralise colours, spacing, typography.
@@ -54,8 +58,15 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 
 ### MVP · **Q3 2025**
 #### Core Features
-- [ ] **Authentication** (Firebase Auth or Supabase) – Sign-in/out, protected routes (*deferred - UI element commented out*).
-- [ ] **Checkout flow** end-to-end: cart → shipping → payment (Stripe & PayPal) → order confirmation.
+- [~] **Authentication** (Supabase) – Sign-in/out, protected routes (*deferred - UI element commented out*).
+  - ✅ Implemented authentication context with mock auth functions
+  - ✅ Added protected route components
+  - ✅ Created login page with redirect handling
+  - ⏳ Integrate with Supabase for real authentication
+- [~] **Checkout flow** end-to-end: cart → shipping → payment (Stripe & PayPal) → order confirmation.
+  - ✅ Implemented checkout route structure
+  - ✅ Created protected checkout routes
+  - ⏳ Integrate payment gateway (Stripe/PayPal)
 - [ ] **Internationalisation** with react-i18next (FR/EN) incl. dynamic locale switch (*deferred - UI element commented out*).
 - [ ] **Product catalogue API** (Node/Express + Prisma) seeded with demo data.
 #### Quality
@@ -68,8 +79,12 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 - [ ] **CMS integration** (Sanity or Strapi) powering legal pages, blog, FAQs.
 - [ ] **Performance**: optimise CWV (code-splitting, image optimisation, lazy routes).
 - [ ] **CI/CD** pipeline (GitHub Actions → Vercel/Netlify) with automated tests.
-- [ ] **Error monitoring** (Sentry) & logging.
-- [ ] **SEO enhancements**: structured data, sitemap, meta tags.
+- [~] **Error monitoring** (Sentry) & logging.
+  - ✅ Added basic error handling with error boundaries in routes
+  - ⏳ Implement Sentry for production error tracking
+- [~] **SEO enhancements**: structured data, sitemap, meta tags.
+  - ✅ Improved routing structure for better URLs
+  - ⏳ Add structured data and meta tags
 
 ### 2026+ · **Platform & Business Expansion**
 - [ ] **Mobile app** (React Native / Expo) sharing component library.
