@@ -46,7 +46,7 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 
 ### Sprint 0 · **Codebase Hardening**
 - [ ] Integrate **React Router v6** → replace `useState` view switch.
-- [ ] Create lightweight **cart context** (React Context + reducer).
+- [ ] Create lightweight **cart context** (React Context + reducer) (*deferred - UI element commented out*).
 - [ ] Basic **form validation** (React-Hook-Form + Yup) for Contact & Payment.
 - [x] Tailwind **design tokens** → centralise colours, spacing, typography.
 - [ ] Replace placeholder images with optimised assets, add <img loading="lazy">.
@@ -54,9 +54,9 @@ Deliver a delightful, high-performance web experience that makes choosing, confi
 
 ### MVP · **Q3 2025**
 #### Core Features
-- [ ] **Authentication** (Firebase Auth or Supabase) – Sign-in/out, protected routes.
+- [ ] **Authentication** (Firebase Auth or Supabase) – Sign-in/out, protected routes (*deferred - UI element commented out*).
 - [ ] **Checkout flow** end-to-end: cart → shipping → payment (Stripe & PayPal) → order confirmation.
-- [ ] **Internationalisation** with react-i18next (FR/EN) incl. dynamic locale switch.
+- [ ] **Internationalisation** with react-i18next (FR/EN) incl. dynamic locale switch (*deferred - UI element commented out*).
 - [ ] **Product catalogue API** (Node/Express + Prisma) seeded with demo data.
 #### Quality
 - [ ] **Unit tests** (Vitest + React Testing Library) for critical UI.

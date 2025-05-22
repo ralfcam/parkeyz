@@ -24,9 +24,6 @@ const PiedDePage: React.FC<PiedDePageProps> = ({ onNavigate }) => {
                   target.src = 'https://placehold.co/40x40/00b8ff/ffffff?text=P';
                 }}
               />
-              <span className="text-3xl font-bold">
-                PARKEEYZ
-              </span>
             </div>
             <p className="text-gray-300 leading-relaxed text-body">
               Votre solution de stationnement intelligente. Sécurisez, contrôlez et gérez votre espace de stationnement en toute simplicité.

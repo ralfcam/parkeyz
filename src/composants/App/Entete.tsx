@@ -79,16 +79,25 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
           </nav>
           
           <div className="flex items-center space-x-6">
+            {/* Future Implementation: Shopping Cart */}
+            {/*
             <div className="relative">
               <ShoppingCart className="h-6 w-6 text-white" />
               <span className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center text-xs bg-primary rounded-full text-white">
                 0
               </span>
             </div>
-            <Globe className="h-6 w-6 text-white hidden sm:block" />
+            */}
+
+            {/* Future Implementation: Language Selector */}
+            {/* <Globe className="h-6 w-6 text-white hidden sm:block" /> */}
+            
+            {/* Future Implementation: Login Button */}
+            {/* 
             <button className="hidden sm:block btn-primary">
               Connexion
             </button>
+            */}
             
             {/* Bouton du menu mobile */}
             <button 
@@ -154,9 +163,12 @@ const Entete: React.FC<EnteteProps> = ({ currentView, handleNavigate }) => { // 
               >
                 Contactez-Nous
               </a>
+              {/* Future Implementation: Login Button Mobile */}
+              {/* 
               <button className="w-full text-center btn-primary">
                 Connexion
               </button>
+              */}
             </nav>
           </div>
         )}
