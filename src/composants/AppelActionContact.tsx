@@ -1,40 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { MessageCircle } from 'lucide-react';
 
 const AppelActionContact: React.FC = () => {
   return (
-    <section className="section bg-neutral-light relative overflow-hidden">
+    <section className="section bg-gradient-to-r from-primary to-secondary text-white">
       <div className="container">
-        <div className="flex justify-between items-center">
-          {/* Illustration Gauche - Cachée sur mobile */}
-          <div className="w-1/4 -ml-layout-lg hidden md:flex items-center">
-            <img 
-              src="/contact&faq1.webp" 
-              alt="Illustration de Panneaux de Stationnement"
-              className="w-full h-[300px] object-contain"
-            />
-          </div>
-
-          {/* Contenu Central */}
-          <div className="text-center max-w-2xl mx-auto px-layout-sm md:px-layout-lg">
-            <span className="inline-block px-6 py-2 mb-layout-md text-secondary bg-secondary-light rounded-btn text-sm font-medium">
-              Contact & FAQ
-            </span>
-            <h2 className="text-neutral-dark mb-layout-lg">
-              Des Questions? Nous Sommes Là Pour Vous Aider
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="mb-layout-lg">
+            <MessageCircle className="w-16 h-16 mx-auto mb-layout-md opacity-90" />
+            <h2 className="text-display-2 mb-layout-md">
+              Des questions ? Nous sommes là pour vous aider.
             </h2>
-            <button className="btn-secondary btn-lg">
-              Contactez-Nous
-            </button>
+            <p className="text-heading-3 opacity-90 mb-layout-xl">
+              Notre équipe jeune et passionnée est disponible pour répondre à toutes vos questions 
+              sur Lockeeyz et vous accompagner dans votre projet.
+            </p>
           </div>
-
-          {/* Illustration Droite - Cachée sur mobile */}
-          <div className="w-1/4 -mr-layout-lg hidden md:flex items-center translate-y-6">
-            <img 
-              src="/contact&faq2.webp" 
-              alt="Illustration d'Espace de Stationnement"
-              className="w-full h-[300px] object-contain transform -scale-x-100"
-            />
-          </div>
+          
+          <Link 
+            to="/contact"
+            className="inline-block px-10 py-4 bg-white text-primary rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 text-lg font-semibold shadow-lg"
+          >
+            Contactez-Nous
+          </Link>
         </div>
       </div>
     </section>

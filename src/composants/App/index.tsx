@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, useLocation, useNavigate, ScrollRestoration } from 'react-router-dom';
 import Entete from './Entete';
 import PiedDePage from '../PiedDePage';
-import ScrollToHashElement from '../../components/ScrollToHashElement';
+import ScrollToHashElement from '../ScrollToHashElement';
 
 function App() {
   const navigate = useNavigate();

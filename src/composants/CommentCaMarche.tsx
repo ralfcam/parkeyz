@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface EtapeProps {
   image: string;
@@ -24,18 +25,18 @@ const CommentCaMarche: React.FC = () => {
   const steps: EtapeProps[] = [
     {
       image: "/howitworks1.webp",
-      title: "Installez Votre Bouncer Key",
-      description: "Processus d'installation rapide de 15 minutes. Configuration facile pour votre place de stationnement."
+      title: "Installez votre Lockeeyz",
+      description: "Fixez votre barrière en quelques minutes, sans outils spéciaux ni compétences techniques. Un jeu d'enfant, même pour les moins bricoleurs d'entre nous."
     },
     {
       image: "/howitworks2.webp",
-      title: "Connectez & Contrôlez",
-      description: "Gérez l'accès en toute simplicité via l'application mobile Bouncer Key."
+      title: "Connectez à l'application",
+      description: "Téléchargez l'application, suivez le guide de configuration et prenez le contrôle de votre place. Une interface intuitive pour une gestion sans prise de tête."
     },
     {
       image: "/howitworks3.webp",
-      title: "Profitez de la Tranquillité d'Esprit",
-      description: "Surveillez votre espace en toute sécurité depuis n'importe où, à tout moment."
+      title: "Gérez et rentabilisez",
+      description: "Partagez l'accès avec vos proches ou mettez votre place en location quand vous ne l'utilisez pas. Vous décidez quand, comment et à qui vous ouvrez votre place."
     }
   ];
 
@@ -44,13 +45,13 @@ const CommentCaMarche: React.FC = () => {
       <div className="container">
         <div className="text-center mb-section-sm">
           <span className="inline-block px-6 py-2 mb-layout-md text-secondary bg-white rounded-btn text-sm font-medium">
-            Comment Ça Marche
+            Comment ça marche
           </span>
           <h2 className="text-display-2 text-neutral-dark mb-layout-md">
             <span className="text-secondary">S</span>imple. <span className="text-secondary">S</span>écurisé. <span className="text-secondary">S</span>ûr.
           </h2>
           <p className="text-heading-3 text-neutral-dark opacity-80 max-w-3xl mx-auto">
-            Stationnement Simplifié grâce à la Technologie de Pointe
+            Stationnement simplifié grâce à la technologie de pointe
           </p>
         </div>
 
@@ -60,12 +61,18 @@ const CommentCaMarche: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex justify-center gap-layout-lg">
-          <button className="btn-secondary btn-lg flex items-center gap-2">
-            Voir Comment Ça Marche
+        <div className="flex flex-col sm:flex-row justify-center gap-layout-md">
+          <button className="btn-secondary btn-lg">
+            Voir le fonctionnement
           </button>
+          <Link 
+            to="/boutique-forfaits"
+            className="btn-outline btn-lg border-secondary text-secondary hover:bg-white inline-block text-center"
+          >
+            Explorer les forfaits
+          </Link>
           <button className="btn-outline btn-lg border-secondary text-secondary hover:bg-white">
-            Explorer les Forfaits
+            Voir la démo en ligne
           </button>
         </div>
       </div>

@@ -11,6 +11,7 @@ import APropos from '../composants/APropos';
 import BoutiqueForfaits from '../composants/BoutiqueForfaits';
 import HomePage from '../composants/Pages/HomePage';
 import LoginPage from '../composants/Pages/LoginPage';
+import LockeeyzProduct from '../composants/Pages/LockeeyzProduct';
 import ProtectedRoute from '../composants/ProtectedRoute';
 
 // Error page for when a route doesn't exist
@@ -61,6 +62,10 @@ const routes: RouteObject[] = [
           {
             path: 'login',
             element: <LoginPage />,
+          },
+          {
+            path: 'lockeeyz',
+            element: <LockeeyzProduct />,
           },
           // Boutique and Forfaits nested routes
           {
